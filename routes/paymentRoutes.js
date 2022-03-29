@@ -26,7 +26,7 @@ router.get("/get/:id", async ({ params: { id } }, res, next) => {
 });
 
 router.post("/create", ({ body: payment }, res, next) => {
-  new Booking(payment)
+  new Payment(payment)
     .save()
     .then(() => res.status(201).send("Successfully created a payment"))
     .catch((err) => next({ status: 400, message: err.message }));
