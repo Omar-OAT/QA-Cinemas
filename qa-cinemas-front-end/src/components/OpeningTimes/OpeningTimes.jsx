@@ -3,7 +3,9 @@ import { Table } from "reactstrap";
 const OpeningTimes = () => {
   return (
     <div className="text-white">
-      <h1 align="center">Opening Times</h1>
+      <h1 className="text-white text-center display-1" align="center">
+        Opening Times
+      </h1>
       <br />
       <br />
       <br />
