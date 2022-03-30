@@ -11,24 +11,27 @@ import Places from "./components/Places/Places";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Screens from "./components/Screens/Screens";
 import ContactUs from "./components/ContactUs/ContactUs";
-import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        backgroundColor: "black",
+      }}
+    >
       <Router>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/films" element={<Films />} />
           <Route path="/openingtimes" element={<OpeningTimes />} />
-          <Route path="/whereto" element={<WhereTo />} />
+          <Route path="/gettingthere" element={<WhereTo />} />
           <Route path="/places" element={<Places />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/screens" element={<Screens />} />
           <Route path="/contactus" element={<ContactUs />} />
         </Routes>
-        <Footer />
       </Router>
     </div>
   );

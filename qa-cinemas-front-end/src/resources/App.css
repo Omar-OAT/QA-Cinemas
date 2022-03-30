@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+#reel {
+  width: 50%;
+  height: 50%;
+}
+.div {
+  background-color: black;
+}
+html {
+  background-color: black;
+}
