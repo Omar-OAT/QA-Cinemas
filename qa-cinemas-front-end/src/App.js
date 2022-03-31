@@ -12,6 +12,7 @@ import Screens from "./components/Screens/Screens";
 import ContactUs from "./components/ContactUs/ContactUs";
 import ListingsGallery from "./components/Films/ListingsGallery";
 import FilmOverview from "./components/Films/FilmOverview";
+import Classifications from "./components/Classifications/Classifications";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/screens" element={<Screens />} />
           <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/classifications" element={<Classifications />} />
         </Routes>
       </Router>
     </div>

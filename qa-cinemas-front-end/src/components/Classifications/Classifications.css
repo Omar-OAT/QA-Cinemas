@@ -1,0 +1,28 @@
+h2{
+    color: white;
+}
+
+h3{
+    color: white;
+}
+
+.ClassTable{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    border-color:darkgray;
+}
+
+th{
+    color: white;
+}
+
+td{
+    color: white;
+    border: 1px solid;
+    border-color: darkgray;
+}
+
+a{
+    color: white;
+}
