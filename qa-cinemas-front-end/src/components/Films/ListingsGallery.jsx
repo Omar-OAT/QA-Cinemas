@@ -24,8 +24,9 @@ const ListingsGallery = () => {
 
     return (
         <>
-            <h2>Currently Showing</h2>
+            
             <div>
+            <h2>Currently Showing</h2>
                 <Container fluid>
                 <Row md={3}>
                     {data.map((listing, key) => {

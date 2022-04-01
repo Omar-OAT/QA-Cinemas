@@ -1,7 +1,13 @@
 .App {
   text-align: center;
 }
-
+.navbarpointer
+{
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 100;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -45,4 +51,18 @@
 }
 html {
   background-color: black;
+  
+}
+
+.places
+{
+  background-color: #61dafb;
+}
+.mbody
+{
+margin-top: 30px;
+padding: 16px;
+
+
+
 }

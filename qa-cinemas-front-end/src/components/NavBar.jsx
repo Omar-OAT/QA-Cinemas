@@ -22,7 +22,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div>
+      <div className="navbarpointer">
         <Navbar color="dark" dark expand="md">
           <NavbarBrand href="/">
             <img

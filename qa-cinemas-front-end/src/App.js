@@ -12,6 +12,9 @@ import Screens from "./components/Screens/Screens";
 import ContactUs from "./components/ContactUs/ContactUs";
 import ListingsGallery from "./components/Films/ListingsGallery";
 import FilmOverview from "./components/Films/FilmOverview";
+import NewReleases from "./components/Films/NewReleases";
+import { Carousel } from "reactstrap";
+import CarouselMovies from "./components/carousel";
 
 function App() {
   return (
@@ -22,7 +25,10 @@ function App() {
       }}
     >
       <Router>
-        <NavBar />
+        <div>
+        <NavBar/>
+        </div>
+        <div className="mbody">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/listingsgallery" element={<ListingsGallery/>} />
@@ -33,7 +39,9 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/screens" element={<Screens />} />
           <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/newreleases" element={<CarouselMovies/>}/>
         </Routes>
+        </div>
       </Router>
     </div>
   );
