@@ -1,4 +1,3 @@
-"use strict";
 const router = require("express").Router();
 const { Discussion } = require("../config/db");
 
