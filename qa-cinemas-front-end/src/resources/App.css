@@ -54,15 +54,45 @@ html {
   
 }
 
-.places
+#pagewonder
 {
-  background-color: #61dafb;
+  color: rgb(187, 208, 255);
+  margin: auto;
+ padding: 10px;
+ height: fit-content;
+ width: auto;
+ margin-left: 10%;
+ margin-right: 10%;
+ margin-bottom: 10%;
+ border-radius: 20px ;
+  background-image:url("../components/images/Space.jpg");
+  
 }
-.mbody
-{
-margin-top: 30px;
-padding: 16px;
-
+.Places{
+  padding: 10px;
+  
+  
+  color: aliceblue;
 
 
 }
+
+.eat {
+background-color: rgba(0, 8, 255, 0.247);
+
+
+margin-left: 10%;
+margin-right: 10%;
+border: 1px solid #104190;
+border-radius: 20px ;
+}
+.play {
+  background-color: rgba(26, 26, 26, 0.247);
+  
+  
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 1px solid #ffffff18;
+  border-radius: 20px ;
+  }
+  
