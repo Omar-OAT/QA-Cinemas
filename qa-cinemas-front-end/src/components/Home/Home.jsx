@@ -102,7 +102,6 @@ const Home = () => {
         discounts on our Places To Go page.
       </h5>
       <br></br>
-      <br></br>
       <h3 className="text-white text-center">
         Please give us a review via email which can be found on our Contact Us
         page!
