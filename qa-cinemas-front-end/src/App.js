@@ -22,12 +22,16 @@ function App() {
       className="App"
       style={{
         backgroundColor: "black",
+        marginTop: `70px`
+        
+        
       }}
     >
       <Router>
         <div>
         <NavBar/>
         </div>
+        
         <div className="mbody">
         <Routes>
           <Route path="/" element={<Home />} />
