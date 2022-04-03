@@ -9,7 +9,7 @@ const OpeningTimes = () => {
       <br />
       <br />
       <br />
-      <Table dark hover responsive align="center">
+      <Table dark hover align="center">
         <thead align="center">
           <tr>
             <th>Day Of The Week</th>
@@ -18,31 +18,31 @@ const OpeningTimes = () => {
         </thead>
         <tbody align="center">
           <tr>
-            <th scope="row">Monday</th>
+            <td>Monday</td>
             <td>10:00AM - 22:00PM</td>
           </tr>
           <tr>
-            <th scope="row">Tuesday</th>
+            <td>Tuesday</td>
             <td>10:00AM - 22:00PM</td>
           </tr>
           <tr>
-            <th scope="row">Wednesday</th>
+            <td>Wednesday</td>
             <td>10:00AM - 22:00PM</td>
           </tr>
           <tr>
-            <th scope="row">Thursday</th>
+            <td>Thursday</td>
             <td>10:00AM - 22:00PM</td>
           </tr>
           <tr>
-            <th scope="row">Friday</th>
+            <td>Friday</td>
             <td>10:00AM - 22:00PM</td>
           </tr>
           <tr>
-            <th scope="row">Saturday</th>
+            <td>Saturday</td>
             <td>10:00AM - 22:00PM</td>
           </tr>
           <tr>
-            <th scope="row">Sunday</th>
+            <td>Sunday</td>
             <td>10:00AM - 22:00PM</td>
           </tr>
         </tbody>
