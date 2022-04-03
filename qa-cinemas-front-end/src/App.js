@@ -15,6 +15,11 @@ import FilmOverview from "./components/Films/FilmOverview";
 import Classifications from "./components/Classifications/Classifications";
 import TicketBookings from "./components/TicketBookings/TicketBookings";
 import Discussion from "./components/Discussion/Discussion";
+import NewReleases from "./components/Films/NewReleases";
+import { Carousel } from "reactstrap";
+import CarouselMovies from "./components/carousel";
+
+
 
 function App() {
   return (
@@ -25,7 +30,10 @@ function App() {
       }}
     >
       <Router>
-        <NavBar />
+        <div>
+        <NavBar/>
+        </div>
+        <div className="mbody">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/listingsgallery" element={<ListingsGallery />} />
@@ -39,7 +47,9 @@ function App() {
           <Route path="/classifications" element={<Classifications />} />
           <Route path="/ticketbookings" element={<TicketBookings />} />
           <Route path="/discussion" element={<Discussion />} />
+          <Route path="/newreleases" element={<CarouselMovies/>}/>
         </Routes>
+        </div>
       </Router>
     </div>
   );

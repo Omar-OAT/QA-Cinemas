@@ -66,7 +66,7 @@ const Home = () => {
   });
 
   return (
-    <>
+    <div className="mbody">
       <br />
       <Container>
         <h1 className="text-white text-center display-1">QA Cinemas</h1>
@@ -106,7 +106,7 @@ const Home = () => {
         Please give us a review via email which can be found on our Contact Us
         page!
       </h3>
-    </>
+    </div>
   );
 };
 export default Home;
