@@ -1,10 +1,10 @@
 
-import Qarcade from "../images/Qarcade.jpg";
+import BARQADE from "../images/BARQADE.jpg";
 
 import { useState } from "react";
 import { Modal, Button, Row, Col } from "react-bootstrap";
 
-const ArQAde = () => {
+const QABarOnly = () => {
   useState();
   const [show, setShow] = useState(false);
 
@@ -12,28 +12,29 @@ const ArQAde = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <section className="play">
+    <section className="eat">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6 order-lg-1">
+          <div class="col-lg-6 order-lg-2">
             <div class="p-5">
               <img
                 class="rounded-circle img-fluid border border-primary"
-                src={Qarcade}
+                src={BARQADE}
+                alt="BarQADE"
               />
             </div>
           </div>
-          <div class="col-lg-6 order-lg-2">
+          <div class="col-lg-6 order-lg-1">
             <div class="p-5">
-              <h2 class="display-4">For those who love to game!</h2>
+              <h2 class="display-4">For those who love a beverage!</h2>
               <p>
-                Got some time to kill? or perhaps so hi-scores at our brand new
-                arcade for those times where your just not ready to go home
+                Cocktails and Mocktails, here you can get whatever you like with our wide selection and with our new light up floor
+                everywhere you step is a party, the catch? You get to enjoy a space that is for adults only.
                 <br />
               </p>
-              <h2>ArQAde</h2>
-              <p class="font-italic">3rd floor</p>
-              <p></p>
+              <h2>The Qlub</h2>
+              <p class="font-italic">No children allowed</p>
+              <p>Open only on Fri-Sun 17:00-01:00</p>
               <Button variant="primary" onClick={handleShow}>
                 Launch demo modal
               </Button>
@@ -51,10 +52,10 @@ const ArQAde = () => {
                       <Col>country</Col>
                     </Row>
                     <Row>
-                      <Col> Qarnage games</Col>
-                      <Col> 0800 12121 </Col>
-                      <Col>arQAneStudio@Qarnage.com</Col>
-                      <Col>123 oldtown road</Col>
+                      <Col> Paragon</Col>
+                      <Col> 0161 9393 </Col>
+                      <Col>ParaGon@BarQAde.co.uk</Col>
+                      <Col>123 newtown road</Col>
                       <Col>United Kingdom</Col>
                     </Row>
                   </Modal.Body>
@@ -73,4 +74,4 @@ const ArQAde = () => {
   );
 };
 
-export default ArQAde;
+export default QABarOnly;

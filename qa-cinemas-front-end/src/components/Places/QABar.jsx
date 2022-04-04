@@ -1,4 +1,3 @@
-import { renderMatches } from "react-router-dom";
 import places2eat from "../images/Place2eat.jpg";
 
 import { useState } from "react";
@@ -26,7 +25,7 @@ const QABar = () => {
           </div>
           <div class="col-lg-6 order-lg-1">
             <div class="p-5">
-              <h2 class="display-4">For Colose who love to eat</h2>
+              <h2 class="display-4">For those who love to eat</h2>
               <p>
                 Come down to our on-site resteruant, where you and your family
                 can come to eat before and after enjoying a movie.
@@ -41,7 +40,7 @@ const QABar = () => {
                 Childrens meals
                 <br />
               </p>
-              <p></p>
+              <p>Open everyday from 14:00-23:00</p>
               <Button variant="primary" onClick={handleShow}>
                 Address and offers
               </Button>
