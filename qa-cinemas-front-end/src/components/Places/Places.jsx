@@ -1,12 +1,9 @@
-import { renderMatches } from "react-router-dom";
-import places2eat from "../images/Place2eat.jpg";
-import Example from "./Modal";
-import modalComponent from "./Modal";
 
 import React, { useState } from "react";
-import { Modal,Button } from "react-bootstrap";
+
 import QABar from "./QABar";
 import ArQAde from "./ArQAde";
+import QABarOnly from "./QABaronly";
 
 const Places = () => {
 
@@ -28,6 +25,7 @@ const Places = () => {
       </div>
       <QABar/>
       <ArQAde/>
+      <QABarOnly/>
       </div>
   );
 };
