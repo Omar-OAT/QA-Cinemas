@@ -8,7 +8,7 @@ import {
   ModalBody,
 } from "reactstrap";
 
-const EditDiscussion = ({ item, trigger }) => {
+const EditDiscussion = ({ item, trigger, loginStatus }) => {
   const { movie, movieRating, movieComment } = item;
   const [updateMovie, setUpdateMovie] = useState(movie);
   const [updateMovieRating, setUpdateMovieRating] = useState(movieRating);
@@ -16,22 +16,32 @@ const EditDiscussion = ({ item, trigger }) => {
 
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
+  const refreashPage = () => {
+    window.location.reload();
+  };
 
   const updateDatabase = (e) => {
-    e.preventDefault();
-    axios
-      .put(`http://localhost:4494/discussion/replace/${item._id}`, {
-        movie: updateMovie,
-        rating: updateMovieRating,
-        comment: updateMovieComment,
-      })
-      .then((res) => {
-        trigger(res.data);
-        toggle();
-      })
-      .catch((err) => {
-        trigger(err.data);
-      });
+    if (loginStatus === 1) {
+      e.preventDefault();
+      axios
+        .put(
+          `http://localhost:4494/discussion/replace/${item._id}?movie=${updateMovie}&movieRating=${updateMovieRating}&movieComment=${updateMovieComment}`,
+          {
+            movie: updateMovie,
+            movieRating: updateMovieRating,
+            movieComment: updateMovieComment,
+          }
+        )
+        .then((res) => {
+          trigger(res.data);
+          toggle();
+        })
+        .catch((err) => {
+          trigger(err.data);
+        });
+    } else {
+      trigger("You are not logged in!");
+    }
   };
 
   return (
@@ -71,7 +81,13 @@ const EditDiscussion = ({ item, trigger }) => {
           >
             Update
           </button>
-          <button onClick={toggle} className="btn btn-outline-danger">
+          <button
+            onClick={() => {
+              toggle();
+              refreashPage();
+            }}
+            className="btn btn-outline-danger"
+          >
             Cancel
           </button>
         </ModalFooter>

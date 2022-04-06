@@ -1,4 +1,3 @@
-
 import Qarcade from "../images/Qarcade.jpg";
 
 import { useState } from "react";
@@ -20,6 +19,7 @@ const ArQAde = () => {
               <img
                 class="rounded-circle img-fluid border border-primary"
                 src={Qarcade}
+                alt="Qarcade"
               />
             </div>
           </div>

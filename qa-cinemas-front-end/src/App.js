@@ -14,9 +14,6 @@ import ListingsGallery from "./components/Films/ListingsGallery";
 import FilmBooking from "./components/Films/FilmBooking";
 import Classifications from "./components/Classifications/Classifications";
 import Discussion from "./components/Discussion/Discussion";
-import CarouselMovies from "./components/carousel";
-
-
 
 function App() {
   return (
@@ -24,16 +21,14 @@ function App() {
       className="App"
       style={{
         backgroundColor: "black",
-        marginTop: `70px`
-        
-        
+        marginTop: `70px`,
       }}
     >
       <Router>
         <div>
-        <NavBar/>
+          <NavBar />
         </div>
-        
+
         <div className="mbody">
         <Routes>
           <Route path="/" element={<Home />} />
