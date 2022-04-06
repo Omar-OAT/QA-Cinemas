@@ -13,11 +13,6 @@ z-index: 100;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -54,20 +49,7 @@ html {
   
 }
 
-#pagewonder
-{
-  color: rgb(187, 208, 255);
-  margin: auto;
- padding: 10px;
- height: fit-content;
- width: auto;
- margin-left: 10%;
- margin-right: 10%;
- margin-bottom: 10%;
- border-radius: 20px ;
-  background-image:url("../components/images/Space.jpg");
-  
-}
+
 .Places{
   padding: 10px;
   

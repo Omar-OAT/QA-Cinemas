@@ -15,11 +15,6 @@ import FilmOverview from "./components/Films/FilmOverview";
 import Classifications from "./components/Classifications/Classifications";
 import TicketBookings from "./components/TicketBookings/TicketBookings";
 import Discussion from "./components/Discussion/Discussion";
-import NewReleases from "./components/Films/NewReleases";
-import { Carousel } from "reactstrap";
-import CarouselMovies from "./components/carousel";
-
-
 
 function App() {
   return (
@@ -27,32 +22,29 @@ function App() {
       className="App"
       style={{
         backgroundColor: "black",
-        marginTop: `70px`
-        
-        
+        marginTop: `70px`,
       }}
     >
       <Router>
         <div>
-        <NavBar/>
+          <NavBar />
         </div>
-        
+
         <div className="mbody">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/listingsgallery" element={<ListingsGallery />} />
-          <Route path="/openingtimes" element={<OpeningTimes />} />
-          <Route path="/film/:data.id" element={<FilmOverview />} />
-          <Route path="/gettingthere" element={<WhereTo />} />
-          <Route path="/places" element={<Places />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/screens" element={<Screens />} />
-          <Route path="/contactus" element={<ContactUs />} />
-          <Route path="/classifications" element={<Classifications />} />
-          <Route path="/ticketbookings" element={<TicketBookings />} />
-          <Route path="/discussion" element={<Discussion />} />
-          <Route path="/newreleases" element={<CarouselMovies/>}/>
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/listingsgallery" element={<ListingsGallery />} />
+            <Route path="/openingtimes" element={<OpeningTimes />} />
+            <Route path="/film/:data.id" element={<FilmOverview />} />
+            <Route path="/gettingthere" element={<WhereTo />} />
+            <Route path="/places" element={<Places />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/screens" element={<Screens />} />
+            <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/classifications" element={<Classifications />} />
+            <Route path="/ticketbookings" element={<TicketBookings />} />
+            <Route path="/discussion" element={<Discussion />} />
+          </Routes>
         </div>
       </Router>
     </div>

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Spinner } from "reactstrap";
 import IndividualDiscussion from "./IndividualDiscussion";
 
-const ReadAllDiscussion = ({ msg, trigger }) => {
+const ReadAllDiscussion = ({ msg, trigger, loginStatus, loginFunc }) => {
   const [movieCommentList, setMovieCommentList] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState("");
@@ -30,7 +30,13 @@ const ReadAllDiscussion = ({ msg, trigger }) => {
       <div className="row">
         {movieCommentList.map((item) => (
           <div className="col-md-12">
-            <IndividualDiscussion key={item.id} item={item} trigger={trigger} />
+            <IndividualDiscussion
+              key={item.id}
+              item={item}
+              trigger={trigger}
+              loginStatus={loginStatus}
+              loginFunc={loginFunc}
+            />
           </div>
         ))}
       </div>

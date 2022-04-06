@@ -2,7 +2,7 @@ import { Card, CardBody, CardTitle, CardSubtitle, CardText } from "reactstrap";
 import EditDiscussion from "./EditDiscussion";
 import DeleteDiscussion from "./RemoveDiscussion";
 
-const IndividualDiscussion = ({ item, trigger }) => {
+const IndividualDiscussion = ({ item, trigger, loginStatus, loginFunc }) => {
   return (
     <>
       <Card>
@@ -17,8 +17,17 @@ const IndividualDiscussion = ({ item, trigger }) => {
             Movie Comment: {item.movieComment}
           </CardText>
           <div className="float-right">
-            <DeleteDiscussion del={item._id} trigger={trigger} />
-            <EditDiscussion item={item} trigger={trigger} />
+            <DeleteDiscussion
+              del={item._id}
+              trigger={trigger}
+              loginStatus={loginStatus}
+              loginFunc={loginFunc}
+            />
+            <EditDiscussion
+              item={item}
+              trigger={trigger}
+              loginStatus={loginStatus}
+            />
           </div>
         </CardBody>
       </Card>
