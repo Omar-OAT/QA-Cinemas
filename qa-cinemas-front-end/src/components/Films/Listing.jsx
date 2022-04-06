@@ -14,19 +14,16 @@ const Listing = ({ data }) => {
 
   return (
     <div className="container">
-      <Card border="danger" body outline color="secondary" body inverse style={{ backgroundColor: '#333', borderColor: '#333', width: '20rem', display: "inline-block" }}
+      <Card border="danger" body inverse style={{ backgroundColor: '#333', borderColor: '#333', width: '20rem', display: "inline-block" }}
       >
         <CardImg
           alt={data.original_title}
           src={"https://image.tmdb.org/t/p/w500" + data.poster_path}
         />
         <CardBody>
-          {/* <CardTitle tag="h5">
-            {data.original_title}
-          </CardTitle> */}
           <CardText>
             <Button variant="primary" onClick={handleShow}>
-              More details
+              Quick View
             </Button>
             <span>
               <Modal show={show} onHide={handleClose} centered size="lg" >
@@ -44,7 +41,7 @@ const Listing = ({ data }) => {
                 <Modal.Footer >
                   <Button variant="secondary" onClick={handleClose}>
                     <Link to={`/film/${data.id}`}>
-                    Book Now
+                    More details
                     </Link>
                   </Button>
                 </Modal.Footer>
