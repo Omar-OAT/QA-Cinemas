@@ -117,9 +117,10 @@ describe("Test Discussion", () => {
       .end((err, res) => {
         expect(err).to.be.null;
         expect(res).to.have.status(202);
-        expect(res.body).to.haveOwnProperty("movie", "Star Wars");
-        expect(res.body).to.haveOwnProperty("movieRating", "9");
-        expect(res.body).to.haveOwnProperty("movieComment", "Great Movie!");
+        expect(res).to.haveOwnProperty(
+          "text",
+          "Successfully updated comment with Id:" + testDiscussion.id
+        );
         return done();
       });
   });

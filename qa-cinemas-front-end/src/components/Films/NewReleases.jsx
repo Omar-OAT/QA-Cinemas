@@ -27,7 +27,7 @@ const NewReleases = () => {
   return (
     <>
       <br />
-      <h2>Currently Showing</h2>
+      <h2>New Releases</h2>
       <div>
         <Container fluid>
           <Row md={3}>

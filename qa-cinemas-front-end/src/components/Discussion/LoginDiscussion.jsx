@@ -23,7 +23,7 @@ const LoginDiscussion = ({ trigger, loginFunc, loginStatus }) => {
 
   return (
     <div className="bg-dark" id="sidebar">
-      <Card inverse color="dark">
+      <Card inverse color="black">
         <CardBody>
           <CardTitle>Login (Only for admin uses)</CardTitle>
           <form onSubmit={checklogin}>
@@ -35,7 +35,7 @@ const LoginDiscussion = ({ trigger, loginFunc, loginStatus }) => {
               onChange={(e) => setUsername(e.target.value)}
             />
             <Input
-              type="text"
+              type="password"
               className="form-control"
               placeholder="Password"
               value={password}

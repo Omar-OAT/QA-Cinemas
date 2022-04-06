@@ -16,13 +16,14 @@ import {
   Container,
 } from "reactstrap";
 
-const BookForm = ({
+const BookForm = (
   showForm,
   setShowForm,
+  data,
   setBookingReference,
-  bookingReference,
-}) => {
-  const [movie, setmovie] = useState(null);
+  bookingReference
+) => {
+  const [movie, setMovie] = useState(null);
   const [movieDate, setMovieDate] = useState("");
   const [movieTime, setMovieTime] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -32,23 +33,24 @@ const BookForm = ({
   const [childTickets, setChildTickets] = useState(0);
   const [concessionTickets, setConcessionTickets] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [filmData, setfilmData] = useState([]);
   const [error, setError] = useState("");
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [price, setPrice] = useState(0);
 
-  const book = (event) => {
-    create(event);
+  const book = (e) => {
+    create(e);
     setShowForm(false);
     setShowConfirmation(true);
   };
 
-  const bookAndPay = (event) => {
-    create(event);
+  const bookAndPay = (e) => {
+    create(e);
     console.log("bookAndPay");
   };
 
-  const create = (event) => {
-    event.preventDefault();
+  const create = (e) => {
+    e.preventDefault();
     axios
       .post(`http://localhost:4494/booking/create`, {
         movie,
@@ -72,22 +74,36 @@ const BookForm = ({
       });
   };
 
-  return(
-    <div> 
-      <Container>
-        <Row>
-          <Col></Col>
-          <Col><h2>Come book with us</h2></Col>
-          <Col></Col>
-        </Row>
-        <Row>
-          <Col>
-          yo
-          </Col>
-          <Col></Col>
-          <Col></Col>
-        </Row>
-      </Container>
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.themoviedb.org/3/movie/${data}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
+      )
+      .then((response) => {
+        console.log(response.data); //see what the data looks like
+        if (Array.isArray(response.data)) {
+          // If the response is of type array
+          console.log("type of running");
+          setfilmData(response.data);
+        } else {
+          setfilmData([response.data]); // put my response into an array
+        }
+      });
+  }, []);
+
+  useEffect(() => {
+    setPrice(adultTickets * 10 + childTickets * 8 + concessionTickets * 8);
+  }, [adultTickets, childTickets, concessionTickets]);
+
+  return (
+    <div className="film">
+      {filmData.map((profile, key) => {
+        return (
+          <>
+            <h2> {profile.original_title}</h2>
+          </>
+        );
+      })}
     </div>
   );
 };
