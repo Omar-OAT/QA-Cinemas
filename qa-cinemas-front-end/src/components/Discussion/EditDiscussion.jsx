@@ -16,9 +16,6 @@ const EditDiscussion = ({ item, trigger, loginStatus }) => {
 
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
-  const refreashPage = () => {
-    window.location.reload();
-  };
 
   const updateDatabase = (e) => {
     if (loginStatus === 1) {
@@ -81,13 +78,7 @@ const EditDiscussion = ({ item, trigger, loginStatus }) => {
           >
             Update
           </button>
-          <button
-            onClick={() => {
-              toggle();
-              refreashPage();
-            }}
-            className="btn btn-outline-danger"
-          >
+          <button onClick={toggle} className="btn btn-outline-danger">
             Cancel
           </button>
         </ModalFooter>

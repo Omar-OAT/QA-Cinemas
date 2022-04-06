@@ -25,7 +25,7 @@ const LoginDiscussion = ({ trigger, loginFunc, loginStatus }) => {
     <div className="bg-dark" id="sidebar">
       <Card inverse color="dark">
         <CardBody>
-          <CardTitle>Login</CardTitle>
+          <CardTitle>Login (Only for admin uses)</CardTitle>
           <form onSubmit={checklogin}>
             <Input
               type="text"

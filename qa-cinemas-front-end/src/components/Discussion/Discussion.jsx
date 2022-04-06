@@ -20,6 +20,7 @@ const Discussion = () => {
     <>
       <div className="jumbotron d-flex align-items-center">
         <div className="container">
+          <br />
           <h1 className="text-white">Discussion Board</h1>
           <p className="text-white">
             Have your say on your favourite films using the box below
@@ -36,6 +37,7 @@ const Discussion = () => {
           />
           <br />
           <CreateDiscussion trigger={trigger} />
+          <br />
         </div>
         <div className="container">
           <div className="col-md-10">
