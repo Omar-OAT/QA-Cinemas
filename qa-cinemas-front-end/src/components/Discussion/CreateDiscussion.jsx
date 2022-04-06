@@ -2,7 +2,7 @@ import { Card, CardBody, CardTitle, Input } from "reactstrap";
 import { useState } from "react";
 import axios from "axios";
 
-const CreateDiscussion = ({ trigger }) => {
+const CreateDiscussion = ({ trigger, login }) => {
   const [movie, setMovie] = useState("");
   const [movieRating, setMovieRating] = useState("");
   const [movieComment, setMovieComment] = useState("");
@@ -32,7 +32,7 @@ const CreateDiscussion = ({ trigger }) => {
 
   return (
     <div className="bg-dark" id="sidebar">
-      <Card inverse color="dark">
+      <Card>
         <CardBody>
           <CardTitle>Discuss the Movie!</CardTitle>
           <form onSubmit={create}>

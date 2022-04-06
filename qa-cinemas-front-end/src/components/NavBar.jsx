@@ -27,7 +27,7 @@ const NavBar = () => {
           <NavbarBrand href="/">
             <img
               src={logo}
-              class="d-inline-block align-top"
+              className="d-inline-block align-top"
               width="75"
               height="55"
               alt="Home Page Logo"
@@ -43,7 +43,7 @@ const NavBar = () => {
                 <DropdownToggle nav caret>
                   Gallery
                 </DropdownToggle>
-                <DropdownMenu right>
+                <DropdownMenu end>
                   <DropdownItem href="/newreleases">New Releases</DropdownItem>
                   <DropdownItem href="/listingsgallery">
                     Listings Gallery
