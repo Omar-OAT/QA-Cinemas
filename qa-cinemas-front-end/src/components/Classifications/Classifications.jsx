@@ -8,18 +8,26 @@ import picture6 from "../images/18.png";
 
 const Classifications = () => {
   return (
-    <div>
+    <section className="main-section">
+    <div className="main-bg">
       <br />
+      <h3>QA Cinemas</h3>
       <h2> Movie Classifications </h2>
-
-      <h3>
+      <div className="line">
+                    <div />
+                    <div />
+                    <div />
+                </div>
+      <br />
+      <p className="text">
         {" "}
         This page is dedicated to providing you with information regarding the
-        different age classifications for our movies. If there is any more
+        different age classifications for our movies.<br></br> If there is any more
         information you require, please visit the 'Contact Us' page of this
         website.{" "}
-      </h3>
-
+      </p>
+      </div>
+      <div>
       <table className="ClassTable">
         <tr>
           <th>Age Rating</th>
@@ -54,12 +62,12 @@ const Classifications = () => {
           <td> Suitable for ages 18 and over </td>
         </tr>
       </table>
-
-      <h3>
+<br />
+      <p className="txt1">
         {" "}
         Please use the below links for any additional information you might
         require regarding the specific Movie Classifications:{" "}
-      </h3>
+      </p>
       <a target="_blank" href="https://www.bbfc.co.uk/about-classification">
         British Board of Film Classification
       </a>
@@ -73,6 +81,7 @@ const Classifications = () => {
       </a>
       <br></br>
     </div>
+    </section>
   );
 };
 

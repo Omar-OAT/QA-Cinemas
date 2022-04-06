@@ -1,4 +1,4 @@
-import './style.css'
+import './ContactUsStyle.css'
 function ContactUs() {
     return (
         <section className="contact-section">
