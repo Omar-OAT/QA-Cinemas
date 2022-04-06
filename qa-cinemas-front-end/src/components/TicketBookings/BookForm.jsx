@@ -13,6 +13,7 @@ import {
   Row,
   Col,
   Button,
+  Container,
 } from "reactstrap";
 
 const BookForm = ({
@@ -71,7 +72,24 @@ const BookForm = ({
       });
   };
 
-  return <h1></h1>;
+  return(
+    <div> 
+      <Container>
+        <Row>
+          <Col></Col>
+          <Col><h2>Come book with us</h2></Col>
+          <Col></Col>
+        </Row>
+        <Row>
+          <Col>
+          yo
+          </Col>
+          <Col></Col>
+          <Col></Col>
+        </Row>
+      </Container>
+    </div>
+  );
 };
 
 export default BookForm;
