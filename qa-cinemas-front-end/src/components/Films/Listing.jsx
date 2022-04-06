@@ -1,7 +1,7 @@
 import { Card, CardImg, CardBody, CardText, Button } from "reactstrap";
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
-import { NavLink } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
 const Listing = ({ data }) => {
@@ -13,7 +13,7 @@ const Listing = ({ data }) => {
   const handleShow = () => setShow(true);
 
   return (
-    <div class="container">
+    <div className="container">
       <Card border="danger" body outline color="secondary" body inverse style={{ backgroundColor: '#333', borderColor: '#333', width: '20rem', display: "inline-block" }}
       >
         <CardImg
@@ -40,11 +40,12 @@ const Listing = ({ data }) => {
                 <Modal.Body >
                   {data.overview} <br /> <br />
                   Release date: {data.release_date}
-                  {/* <BookingTickets filmData={data} /> */}
                 </Modal.Body>
                 <Modal.Footer >
                   <Button variant="secondary" onClick={handleClose}>
-                  <NavLink href="/ticketbookings">Book now</NavLink>
+                    <Link to={`/film/${data.id}`}>
+                    Book Now
+                    </Link>
                   </Button>
                 </Modal.Footer>
               </Modal>
