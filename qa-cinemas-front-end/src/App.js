@@ -30,20 +30,19 @@ function App() {
         </div>
 
         <div className="mbody">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/listingsgallery" element={<ListingsGallery />} />
-          <Route path="/openingtimes" element={<OpeningTimes />} />
-          <Route path="/film/:id" element={<FilmBooking />} />
-          <Route path="/gettingthere" element={<WhereTo />} />
-          <Route path="/places" element={<Places />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/screens" element={<Screens />} />
-          <Route path="/contactus" element={<ContactUs />} />
-          <Route path="/classifications" element={<Classifications />} />
-          <Route path="/discussion" element={<Discussion />} />
-          <Route path="/newreleases" element={<CarouselMovies/>}/>
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/listingsgallery" element={<ListingsGallery />} />
+            <Route path="/openingtimes" element={<OpeningTimes />} />
+            <Route path="/film/:id" element={<FilmBooking />} />
+            <Route path="/gettingthere" element={<WhereTo />} />
+            <Route path="/places" element={<Places />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/screens" element={<Screens />} />
+            <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/classifications" element={<Classifications />} />
+            <Route path="/discussion" element={<Discussion />} />
+          </Routes>
         </div>
       </Router>
     </div>
