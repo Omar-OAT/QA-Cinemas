@@ -29,7 +29,7 @@ const Discussion = () => {
       </div>
       {/* <h1>Welcome to the discussion board</h1> */}
       <div className="row" align="center">
-        <div className="col-md-2">
+        <div>
           <LoginDiscussion
             trigger={trigger}
             loginFunc={loginFunc}

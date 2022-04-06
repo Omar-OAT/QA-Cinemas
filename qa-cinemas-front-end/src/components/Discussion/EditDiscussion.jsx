@@ -21,14 +21,11 @@ const EditDiscussion = ({ item, trigger, loginStatus }) => {
     if (loginStatus === 1) {
       e.preventDefault();
       axios
-        .put(
-          `http://localhost:4494/discussion/replace/${item._id}?movie=${updateMovie}&movieRating=${updateMovieRating}&movieComment=${updateMovieComment}`,
-          {
-            movie: updateMovie,
-            movieRating: updateMovieRating,
-            movieComment: updateMovieComment,
-          }
-        )
+        .put(`http://localhost:4494/discussion/replace/${item._id}`, {
+          movie: updateMovie,
+          movieRating: updateMovieRating,
+          movieComment: updateMovieComment,
+        })
         .then((res) => {
           trigger(res.data);
           toggle();
@@ -37,7 +34,7 @@ const EditDiscussion = ({ item, trigger, loginStatus }) => {
           trigger(err.data);
         });
     } else {
-      trigger("You are not logged in!");
+      trigger("You are not an admin!");
     }
   };
 
