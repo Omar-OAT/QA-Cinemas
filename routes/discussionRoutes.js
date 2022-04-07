@@ -31,18 +31,21 @@ router.post("/create", ({ body: discussion }, res, next) => {
     .catch((err) => next({ status: 400, message: err.message }));
 });
 
-router.put(
-  "/replace/:id",
-  async ({ query: newDiscussion, params: { id } }, res, next) => {
-    try {
-      await Discussion.findByIdAndUpdate(id, newDiscussion);
-      const updatedDiscussion = await Discussion.findById(id);
-      return res.status(202).send(updatedDiscussion);
-    } catch (error) {
-      return next({ status: 400, message: error.message });
+router.put("/replace/:id", (req, res, next) => {
+  Discussion.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err) => {
+      if (err) {
+        next(err);
+      }
+      res
+        .status(202)
+        .send(`Successfully updated comment with Id:` + req.params.id);
     }
-  }
-);
+  );
+});
 
 router.delete("/remove/:id", ({ params: { id } }, res, next) => {
   Discussion.findByIdAndDelete(id, (err) => {

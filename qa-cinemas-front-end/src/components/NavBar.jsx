@@ -54,9 +54,6 @@ const NavBar = () => {
                 <NavLink href="/screens">Screens</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/ticketbookings">Ticket Bookings</NavLink>
-              </NavItem>
-              <NavItem>
                 <NavLink href="/classifications">Classifications</NavLink>
               </NavItem>
               <NavItem>

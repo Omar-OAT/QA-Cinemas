@@ -1,14 +1,21 @@
 import { Table } from "reactstrap";
+import './OpeningTimesStyle.css'
 
 const OpeningTimes = () => {
   return (
-    <div className="text-white">
-      <h1 className="text-white text-center display-1" align="center">
-        Opening Times
+    <div>
+      <div  className="opening-bg">
+      <h3>QA Cinemas</h3>      
+      <h1 className="text-white" align="center">
+        OPENING TIMES
       </h1>
-      <br />
-      <br />
-      <br />
+      <div className="line">
+                    <div />
+                    <div />
+                    <div />
+                  </div>
+      </div>
+      <div className="opentable">
       <Table dark hover align="center">
         <thead align="center">
           <tr>
@@ -47,6 +54,7 @@ const OpeningTimes = () => {
           </tr>
         </tbody>
       </Table>
+      </div>
     </div>
   );
 };

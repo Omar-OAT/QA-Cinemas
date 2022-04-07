@@ -16,22 +16,16 @@ const EditDiscussion = ({ item, trigger, loginStatus }) => {
 
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
-  const refreashPage = () => {
-    window.location.reload();
-  };
 
   const updateDatabase = (e) => {
     if (loginStatus === 1) {
       e.preventDefault();
       axios
-        .put(
-          `http://localhost:4494/discussion/replace/${item._id}?movie=${updateMovie}&movieRating=${updateMovieRating}&movieComment=${updateMovieComment}`,
-          {
-            movie: updateMovie,
-            movieRating: updateMovieRating,
-            movieComment: updateMovieComment,
-          }
-        )
+        .put(`http://localhost:4494/discussion/replace/${item._id}`, {
+          movie: updateMovie,
+          movieRating: updateMovieRating,
+          movieComment: updateMovieComment,
+        })
         .then((res) => {
           trigger(res.data);
           toggle();
@@ -40,7 +34,7 @@ const EditDiscussion = ({ item, trigger, loginStatus }) => {
           trigger(err.data);
         });
     } else {
-      trigger("You are not logged in!");
+      trigger("You are not an admin!");
     }
   };
 
@@ -81,13 +75,7 @@ const EditDiscussion = ({ item, trigger, loginStatus }) => {
           >
             Update
           </button>
-          <button
-            onClick={() => {
-              toggle();
-              refreashPage();
-            }}
-            className="btn btn-outline-danger"
-          >
+          <button onClick={toggle} className="btn btn-outline-danger">
             Cancel
           </button>
         </ModalFooter>

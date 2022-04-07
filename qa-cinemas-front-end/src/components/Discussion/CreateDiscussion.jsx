@@ -32,7 +32,7 @@ const CreateDiscussion = ({ trigger, login }) => {
 
   return (
     <div className="bg-dark" id="sidebar">
-      <Card>
+      <Card inverse color="black">
         <CardBody>
           <CardTitle>Discuss the Movie!</CardTitle>
           <form onSubmit={create}>
