@@ -13,7 +13,7 @@ const DeleteDiscussion = ({ del, trigger, loginStatus }) => {
           trigger("Error in deleting");
         });
     } else {
-      trigger("You are not logged in!");
+      trigger("You are not an admin!");
     }
   };
 

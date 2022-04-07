@@ -1,20 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 
-h2{
-    font-size: 3rem;
-    text-transform: uppercase;
-    padding: 0.4rem 0;
-    letter-spacing: 4px;
-    color: white;
-}
-.text{
-    color: rgb(255, 255, 255);
-}
-
-.txt1{
-    color:#fff;
-}
-.main-bg{
+#discusscss{
     height: 25vh;
     background-position: 50% 100%;
     background-repeat: no-repeat;
@@ -27,7 +13,12 @@ h2{
     align-items: center;
 }
 
-
+.container .text-whitee{
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0;
+    letter-spacing: 4px;
+}
 
 .line div{
     margin: 0 0.2rem;
@@ -50,29 +41,14 @@ h2{
     border-radius: 50%;
 }
 
-h3{
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: white;
+.text-white{
+    font-weight: 300;
+    opacity: 0.9;
 }
 
-.ClassTable{
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid;
-    border-color:darkgray;
-}
-
-th{
-    color: white;
-}
-
-td{
-    color: white;
-    border: 1px solid;
-    border-color: darkgray;
-}
-
-a{
-    color: white;
+.loginstuff{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

@@ -5,8 +5,9 @@ const FilmBooking = () => {
     const {id} = useParams();
     return ( 
         <div> <br /><br />
-            <h2>Book film - {id}</h2>
+            <p>Film ID {id}</p>
             <FilmManager data={id}/>
+            
         </div>
      );
 }

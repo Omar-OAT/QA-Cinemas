@@ -14,6 +14,7 @@ import ListingsGallery from "./components/Films/ListingsGallery";
 import FilmBooking from "./components/Films/FilmBooking";
 import Classifications from "./components/Classifications/Classifications";
 import Discussion from "./components/Discussion/Discussion";
+import NewReleases from "./components/Films/NewReleases";
 import SearchFilms from "./components/Films/searchbar";
 import MovieDetailsSearch from "./components/Films/MovieDetailsSearch";
 
@@ -32,6 +33,7 @@ function App() {
         </div>
 
         <div className="mbody">
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/listingsgallery" element={<ListingsGallery />} />
@@ -45,9 +47,10 @@ function App() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/classifications" element={<Classifications />} />
           <Route path="/discussion" element={<Discussion />} />
-          <Route path="/newreleases" element={<newReleases/>}/>
+          <Route path="/newreleases" element={<NewReleases/>}/>
           <Route path="/search" element={<SearchFilms/>}/>
         </Routes>
+
         </div>
       </Router>
     </div>

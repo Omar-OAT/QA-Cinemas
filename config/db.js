@@ -5,7 +5,7 @@ const { Schema, model } = mongoose;
 
 const bookingSchema = new Schema({
   movie: { type: String, required: true },
-  movieDate: { type: Date, required: true },
+  movieDate: { type: String, required: true },
   movieTime: { type: String, require: true },
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
@@ -14,7 +14,7 @@ const bookingSchema = new Schema({
   childTickets: { type: Number, required: true },
   concessionTickets: { type: Number, requried: true },
   price: { type: Number, required: true },
-  paid: { type: Boolean, required: true },
+  paid: { type: Boolean },
 });
 
 const discussionSchema = new Schema({
