@@ -2,7 +2,7 @@ import { useState } from "react";
 import CreateDiscussion from "./CreateDiscussion";
 import ReadAllDiscussion from "./ReadAllDiscussions.";
 import LoginDiscussion from "./LoginDiscussion";
-import './DiscussionStyle.css'
+import "./DiscussionStyle.css";
 
 const Discussion = () => {
   const [msg, setMsg] = useState("");
@@ -20,15 +20,15 @@ const Discussion = () => {
   return (
     <>
       <div className="jumbotron d-flex align-items-center">
-        <div className="container">
+        <div className="container" id="discusscss">
           <h3>QA Cinemas</h3>
           <h1 className="text-whitee">Discussion Board</h1>
           <div className="line">
-                    <div />
-                    <div />
-                    <div />
-                </div>
-                <br />
+            <div />
+            <div />
+            <div />
+          </div>
+          <br />
           <p className="text-white">
             Have your say on your favourite films using the box below
           </p>
@@ -44,14 +44,6 @@ const Discussion = () => {
           />
           <br />
           <CreateDiscussion trigger={trigger} />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
           <br />
         </div>
         <div className="container">
