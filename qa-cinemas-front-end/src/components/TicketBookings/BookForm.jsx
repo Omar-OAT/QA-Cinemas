@@ -1,4 +1,5 @@
 import axios from "axios";
+import Payment from "./Payment";
 import { useState, useEffect } from "react";
 import {
   Alert,
@@ -55,7 +56,7 @@ const BookForm = ({ setBookingReference, bookingReference, data }) => {
         paid: false,
       })
       .then((res) => {
-        setBookingReference(res.data._id);
+        // setBookingReference(res.data._id);
         console.log("booking reference:" + bookingReference);
       })
       .catch((err) => {
@@ -201,8 +202,9 @@ const BookForm = ({ setBookingReference, bookingReference, data }) => {
                   <Link
                     style={{ textDecoration: "none" }}
                     className="text-white"
-                    to="/payment"
-                  >
+                    to={`/payment/${data}`}
+                    
+                  > 
                     Book and Pay Now!
                   </Link>
                 </Button>
