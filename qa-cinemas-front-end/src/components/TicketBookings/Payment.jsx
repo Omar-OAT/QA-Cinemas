@@ -7,7 +7,6 @@ import { useParams } from "react-router-dom";
 const Payment = ({ trigger, time, price }) => {
 
   const { filmName } = useParams();
-  const { date } = useParams();
 
   const [cardName, setCardName] = useState();
   const [cardNumber, setCardNumber] = useState();
