@@ -14,9 +14,8 @@ import ListingsGallery from "./components/Films/ListingsGallery";
 import FilmBooking from "./components/Films/FilmBooking";
 import Classifications from "./components/Classifications/Classifications";
 import Discussion from "./components/Discussion/Discussion";
-
+import NewReleases from "./components/Films/NewReleases";
 import SearchFilms from "./components/Films/searchbar";
-
 
 function App() {
   return (
@@ -33,23 +32,21 @@ function App() {
         </div>
 
         <div className="mbody">
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/listingsgallery" element={<ListingsGallery />} />
-          <Route path="/openingtimes" element={<OpeningTimes />} />
-          <Route path="/film/:id" element={<FilmBooking />} />
-          <Route path="/gettingthere" element={<WhereTo />} />
-          <Route path="/places" element={<Places />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/screens" element={<Screens />} />
-          <Route path="/contactus" element={<ContactUs />} />
-          <Route path="/classifications" element={<Classifications />} />
-          <Route path="/discussion" element={<Discussion />} />
-          <Route path="/newreleases" element={<newReleases/>}/>
-          <Route path="/search" element={<SearchFilms/>}/>
-        </Routes>
-
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/listingsgallery" element={<ListingsGallery />} />
+            <Route path="/openingtimes" element={<OpeningTimes />} />
+            <Route path="/film/:id" element={<FilmBooking />} />
+            <Route path="/gettingthere" element={<WhereTo />} />
+            <Route path="/places" element={<Places />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/screens" element={<Screens />} />
+            <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/classifications" element={<Classifications />} />
+            <Route path="/discussion" element={<Discussion />} />
+            <Route path="/newreleases" element={<NewReleases />} />
+            <Route path="/search" element={<SearchFilms />} />
+          </Routes>
         </div>
       </Router>
     </div>

@@ -8,10 +8,10 @@ const IndividualDiscussion = ({ item, trigger, loginStatus, loginFunc }) => {
       <Card>
         <CardBody className="text-center">
           <CardTitle>
-            <h2 className="text-black">Movie Name: {item.movie}</h2>
+            <h4 className="text-black">Movie Name: {item.movie}</h4>
           </CardTitle>
           <CardSubtitle>
-            <h2 className="text-black">Movie Rating: {item.movieRating}</h2>
+            <h4 className="text-black">Movie Rating: {item.movieRating}</h4>
           </CardSubtitle>
           <CardText className="text-black">
             Movie Comment: {item.movieComment}
