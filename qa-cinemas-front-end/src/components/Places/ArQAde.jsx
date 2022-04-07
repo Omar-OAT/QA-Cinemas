@@ -35,7 +35,7 @@ const ArQAde = () => {
               <p class="font-italic">3rd floor</p>
               <p></p>
               <Button variant="primary" onClick={handleShow}>
-                Launch demo modal
+                Contact details
               </Button>
               <div>
                 <Modal show={show} onHide={handleClose} centered size="lg">

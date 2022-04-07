@@ -29,7 +29,7 @@ const SearchList = (props) => {
                 <CardBody>
                
                   <CardText>
-                    <Link to={`/film/${movie.id}`}>Film page</Link>
+                    <Link to={`/moviedetails/${movie.id}`}>Film page</Link>
                   </CardText>
                 </CardBody>
               </Card>

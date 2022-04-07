@@ -42,7 +42,7 @@ const QABar = () => {
               </p>
               <p>Open everyday from 14:00-23:00</p>
               <Button variant="primary" onClick={handleShow}>
-                Address and offers
+              Contact details
               </Button>
               <div>
                 <Modal show={show} onHide={handleClose} centered size="lg"  >
