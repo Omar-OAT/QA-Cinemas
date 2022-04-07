@@ -36,7 +36,7 @@ const QABarOnly = () => {
               <p class="font-italic">No children allowed</p>
               <p>Open only on Fri-Sun 17:00-01:00</p>
               <Button variant="primary" onClick={handleShow}>
-                Launch demo modal
+              Contact details
               </Button>
               <div>
                 <Modal show={show} onHide={handleClose} centered size="lg">
