@@ -17,6 +17,7 @@ import Discussion from "./components/Discussion/Discussion";
 import NewReleases from "./components/Films/NewReleases";
 import SearchFilms from "./components/Films/searchbar";
 import MovieDetailsSearch from "./components/Films/MovieDetailsSearch";
+import Payment from "./components/TicketBookings/Payment";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path="/listingsgallery" element={<ListingsGallery />} />
           <Route path="/openingtimes" element={<OpeningTimes />} />
           <Route path="/film/:id" element={<FilmBooking />} />
+          <Route path="/payment/:filmName" element={<Payment />} />
           <Route path="/moviedetails/:id" element={<MovieDetailsSearch />} />
           <Route path="/gettingthere" element={<WhereTo />} />
           <Route path="/places" element={<Places />} />
