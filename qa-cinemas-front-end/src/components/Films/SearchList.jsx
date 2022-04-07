@@ -27,11 +27,9 @@ const SearchList = (props) => {
                   src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
                 />
                 <CardBody>
-                  {/* <CardTitle tag="h5">
-            {data.original_title}
-          </CardTitle> */}
+               
                   <CardText>
-                    <Link to={`/film/${movie.id}`}>Book Now</Link>
+                    <Link to={`/film/${movie.id}`}>Film page</Link>
                   </CardText>
                 </CardBody>
               </Card>
