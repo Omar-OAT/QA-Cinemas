@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from "axios";
-import Film from './Film';
+import BookForm from '../TicketBookings/BookForm';
+import { Figure, Container, Row, Col, Badge } from 'react-bootstrap';
 
 const FilmManager = ({ data }) => {
 
@@ -20,17 +21,36 @@ const FilmManager = ({ data }) => {
             })
     }, [])
 
-    
+
     return (
-    <div className="film">
-         {
-                filmData.map((profile, key) => {
+        <div className="film">
+            {
+                filmData.map((profile) => {
                     return <>
-                    <h2> {profile.original_title}</h2>
-                    <h4>{profile.overview}</h4>
+                        <Container>
+                            <Row>
+                                <Col><Figure.Image
+                                    width={300}
+                                    height={180}
+                                    alt="171x180"
+                                    src={"https://image.tmdb.org/t/p/w500" + profile.poster_path}
+                                /></Col>
+                                <Col><Figure.Caption>
+                                    <h2> {profile.original_title}</h2>
+                                    <h4>{profile.tagline}</h4> <br />
+                                    <h4>{profile.overview}</h4>
+                                </Figure.Caption></Col>
+                                <Col><h3>Release Date</h3>
+                                    <h4>{profile.release_date}</h4>
+                                    <h6>Genres <br />{profile.genres.map((genre, key) => { return <Badge bg="secondary">{genre.name}</Badge> })}</h6>
+                                </Col>
+                            </Row>
+                        </Container>
+                        <BookForm data={profile.original_title}/>                       
                     </>
                 })}
-    </div>
+                
+        </div>
     );
 }
 

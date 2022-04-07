@@ -14,6 +14,7 @@ import ListingsGallery from "./components/Films/ListingsGallery";
 import FilmBooking from "./components/Films/FilmBooking";
 import Classifications from "./components/Classifications/Classifications";
 import Discussion from "./components/Discussion/Discussion";
+import SearchFilms from "./components/Films/searchbar";
 
 function App() {
   return (
@@ -42,7 +43,8 @@ function App() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/classifications" element={<Classifications />} />
           <Route path="/discussion" element={<Discussion />} />
-          <Route path="/newreleases" element={<CarouselMovies/>}/>
+          <Route path="/newreleases" element={<newReleases/>}/>
+          <Route path="/search" element={<SearchFilms/>}/>
         </Routes>
         </div>
       </Router>
