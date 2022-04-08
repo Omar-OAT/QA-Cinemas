@@ -1,23 +1,60 @@
-import logo from "./logo.svg";
+import NavBar from "./components/NavBar";
+
 import "./resources/App.css";
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./components/Home/Home";
+import OpeningTimes from "./components/OpeningTimes/OpeningTimes";
+import WhereTo from "./components/WhereToFindUs/WhereTo";
+import Places from "./components/Places/Places";
+import AboutUs from "./components/AboutUs/AboutUs";
+import Screens from "./components/Screens/Screens";
+import ContactUs from "./components/ContactUs/ContactUs";
+import ListingsGallery from "./components/Films/ListingsGallery";
+import FilmBooking from "./components/Films/FilmBooking";
+import Classifications from "./components/Classifications/Classifications";
+import Discussion from "./components/Discussion/Discussion";
+import NewReleases from "./components/Films/NewReleases";
+import SearchFilms from "./components/Films/searchbar";
+import MovieDetailsSearch from "./components/Films/MovieDetailsSearch";
+import Payment from "./components/TicketBookings/Payment";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="App"
+      style={{
+        backgroundColor: "black",
+        marginTop: `70px`,
+      }}
+    >
+      <Router>
+        <div>
+          <NavBar />
+        </div>
+
+        <div className="mbody">
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/listingsgallery" element={<ListingsGallery />} />
+          <Route path="/openingtimes" element={<OpeningTimes />} />
+          <Route path="/film/:id" element={<FilmBooking />} />
+          <Route path="/payment/:filmName" element={<Payment />} />
+          <Route path="/moviedetails/:id" element={<MovieDetailsSearch />} />
+          <Route path="/gettingthere" element={<WhereTo />} />
+          <Route path="/places" element={<Places />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/screens" element={<Screens />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/classifications" element={<Classifications />} />
+          <Route path="/discussion" element={<Discussion />} />
+          <Route path="/newreleases" element={<NewReleases/>}/>
+          <Route path="/search" element={<SearchFilms/>}/>
+        </Routes>
+
+        </div>
+      </Router>
     </div>
   );
 }
