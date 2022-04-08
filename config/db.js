@@ -14,7 +14,7 @@ const bookingSchema = new Schema({
   childTickets: { type: Number, required: true },
   concessionTickets: { type: Number, requried: true },
   price: { type: Number, required: true },
-  paid: { type: Boolean },
+  paid: { type: Boolean, required: true },
 });
 
 const discussionSchema = new Schema({
