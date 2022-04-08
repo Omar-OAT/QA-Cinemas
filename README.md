@@ -1,6 +1,9 @@
 # QA CINEMAS
 - This was a group attempt at a full-stack Web application suitable for a given client specification, with utilisation of supporting tools, methodologies and technologies that encapsulate all modules covered during our 12 week training period. 
 
+- Jira Board.
+- https://jtlana.atlassian.net/jira/software/projects/QA/boards/4/roadmap?shared=&atlOrigin=eyJpIjoiMTEwNTcyM2FlY2E4NDA5NTlmYWVjYjlkMDdiMDEyNDYiLCJwIjoiaiJ9
+
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
